@@ -1,0 +1,4 @@
+@import url("design-system.css");
+.idia-manual-launcher { font-size: 12px; min-height: 38px; padding: 8px 10px; background: var(--idia-bg); color: var(--idia-purple); box-shadow: var(--idia-shadow); }
+.idia-manual-frame { position: absolute; right: 0; bottom: 50px; width: min(360px, calc(100vw - 48px)); height: 470px; border: 1px solid var(--idia-border); border-radius: var(--idia-radius); background: var(--idia-bg); box-shadow: var(--idia-shadow); color-scheme: dark; }
+.idia-adapter-notice { position:absolute; right:0; bottom:50px; width:min(280px,calc(100vw - 48px)); padding:14px; border:1px solid var(--idia-border); border-radius:var(--idia-radius-small); background:var(--idia-bg); color:var(--idia-muted); font:12px/1.5 var(--idia-font); box-shadow:var(--idia-shadow); }

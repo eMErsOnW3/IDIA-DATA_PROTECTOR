@@ -1,0 +1,25 @@
+@import url("design-system.css");
+html,body { margin:0; height:100%; background:var(--idia-bg); color:var(--idia-text); font:14px/1.5 var(--idia-font); }
+* { box-sizing:border-box; }
+.idia-manual-panel { height:100%; display:flex; flex-direction:column; padding:18px; overflow:auto; }
+header { position:relative; flex:none; padding-right:30px; }
+h1 { font-size:20px; margin:6px 0 16px; } .idia-brand { font-size:10px; margin:0; }
+.idia-close { position:absolute; right:-6px; top:-6px; min-height:30px; padding:2px 8px; background:transparent; }
+section { display:flex; flex:1; min-height:100px; flex-direction:column; gap:10px; }
+textarea,pre { width:100%; flex:1; min-height:90px; overflow:auto; padding:12px; border:1px solid var(--idia-border); border-radius:var(--idia-radius-small); background:var(--idia-surface); color:var(--idia-text); font:14px/1.5 var(--idia-font); }
+textarea { resize:none; } pre { white-space:pre-wrap; overflow-wrap:anywhere; margin:0; }
+textarea:focus-visible,pre:focus-visible { outline:2px solid var(--idia-blue); outline-offset:2px; }
+footer { display:flex; justify-content:space-between; gap:10px; flex:none; }
+.idia-note { color:var(--idia-muted); font-size:12px; margin:4px 0; } #status:empty { display:none; } #summary { margin:0; font-size:13px; } .idia-error { color:var(--idia-danger); }
+.idia-mode-tabs { display:flex; gap:6px; margin-bottom:12px; flex:none; }
+.idia-mode-tabs .idia-button { flex:1; min-height:34px; padding:6px 12px; }
+.idia-mode-tabs [aria-selected="true"] { background:var(--idia-selected); color:var(--idia-purple); border-color:var(--idia-purple); }
+#text-mode { min-height:0; }
+#file-mode { overflow:auto; min-height:0; }
+.idia-drop-zone { border:1px dashed var(--idia-border); border-radius:var(--idia-radius-small); padding:12px; text-align:center; }
+.idia-drop-zone p { margin:0 0 8px; color:var(--idia-muted); font-size:12px; }
+.idia-file-name { overflow-wrap:anywhere; margin:0; font-weight:600; }
+#file-summary { font-size:13px; margin:0; overflow-wrap:anywhere; }
+#file-hints { padding-left:18px; margin:0; }
+#file-success-actions,#file-review-actions { margin-top:auto; padding-top:8px; }
+#file-success-actions .idia-button { padding:8px; font-size:12px; }

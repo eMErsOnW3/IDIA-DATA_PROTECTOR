@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.wasm binary
+*.traineddata binary
+*.bcmap binary
+*.pfb binary
+*.ttf binary
+lib/** -text
+lib/README.md text eol=lf
+lib/ocr-assets.json text eol=lf

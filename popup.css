@@ -1,0 +1,45 @@
+@import url("design-system.css");
+.idia-popup { width: 350px; max-height: 600px; overflow-y: auto; margin: 0; background: var(--idia-bg-deep); color: var(--idia-text); font: 14px/1.5 var(--idia-font); }
+.idia-control-center { padding: 18px 24px; }
+.idia-popup-header { display: flex; align-items: center; justify-content: space-between; }
+.idia-wordmark { display: flex; align-items: center; gap: 8px; font-size: 30px; line-height: 1; font-weight: 650; letter-spacing: 3px; }
+.idia-wordmark-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--idia-highlight); margin-top: 15px; }
+.idia-version { font-size: 12px; color: var(--idia-muted); }
+.idia-eyebrow { margin: 12px 0 24px; font-size: 12px; letter-spacing: 1.1px; }
+.idia-control-card { border: 1px solid var(--idia-border); border-radius: var(--idia-radius); background: var(--idia-glass); padding: 16px; }
+.idia-status-line { display: flex; gap: 8px; align-items: center; color: var(--idia-success); }
+.idia-status-line p { margin: 0; font-size: 14px; font-weight: 600; }
+.idia-status-dot { flex: 0 0 auto; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.idia-popup[data-state="paused"] .idia-status-line, .idia-popup[data-state="loading"] .idia-status-line { color: var(--idia-muted); }
+.idia-popup[data-state="error"] .idia-status-line { color: var(--idia-danger); }
+.idia-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0; margin-bottom: 8px; border-bottom: 1px solid var(--idia-border-soft); cursor: pointer; }
+.idia-toggle-row strong { font-size: 14px; font-weight: 600; }
+.idia-toggle-row small { display: block; font-size: 12px; color: var(--idia-muted); margin-top: 4px; }
+.idia-switch { appearance: none; width: 40px; height: 24px; border: 1px solid var(--idia-border); border-radius: 20px; background: var(--idia-bg); position: relative; cursor: pointer; flex-shrink: 0; margin: 0; }
+.idia-switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--idia-text); transition: transform 140ms; }
+.idia-switch:checked { background: var(--idia-primary); border-color: var(--idia-purple); }
+.idia-switch:checked::after { transform: translateX(16px); }
+.idia-switch:disabled { opacity: .5; cursor: wait; }
+.idia-protection-row { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; font-size: 13px; color: var(--idia-muted); }
+.idia-state { color: var(--idia-purple); font-size: 12px; font-weight: 600; }
+.idia-popup[data-state="paused"] .idia-state, .idia-popup[data-state="error"] .idia-state { color: var(--idia-muted); }
+.idia-supported { margin-top: 22px; }
+.idia-supported h2 { font-size: 12px; font-weight: 500; color: var(--idia-muted); margin: 0 0 10px; }
+.idia-format-list { display: flex; gap: 6px; flex-wrap: wrap; }
+.idia-format-list span { font-size: 12px; letter-spacing: .4px; padding: 4px 9px; border: 1px solid var(--idia-border-soft); border-radius: 6px; color: var(--idia-text); background: var(--idia-surface); }
+.idia-supported p { font-size: 12px; color: var(--idia-muted); margin: 8px 0 0; }
+.idia-local-note { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--idia-muted); margin: 22px 0 16px; }
+.idia-local-note .idia-icon { width: 17px; height: 17px; color: var(--idia-blue); }
+.idia-settings { margin-top: 16px; }
+.idia-settings-summary { cursor: pointer; color: var(--idia-muted); font-size: 12px; padding: 6px 0; }
+.idia-settings-body { font-size: 12px; color: var(--idia-muted); line-height: 1.6; }
+.idia-settings-body p { margin: 10px 0; }
+.idia-vault-controls { margin-top: 20px; border-top: 1px solid var(--idia-border); padding-top: 12px; }
+.idia-vault-controls label { font-size: 12px; color: var(--idia-muted); }
+.idia-vault-controls select { box-sizing: border-box; width: 100%; background: var(--idia-bg-deep); color: var(--idia-text); border: 1px solid var(--idia-border); padding: 8px; margin: 8px 0; }
+.idia-vault-controls button { width: 100%; margin: 5px 0; }
+.idia-vault-controls a { color: var(--idia-blue); font-size: 12px; }
+.idia-vault-confirm { max-width: 260px; background: var(--idia-bg-deep); color: var(--idia-text); border: 1px solid var(--idia-border); border-radius: 12px; }
+.idia-vault-confirm::backdrop { background: #000a; }
+.idia-vault-confirm button { padding: 8px; background: var(--idia-primary); color: var(--idia-text); border: 1px solid var(--idia-border); border-radius: 6px; margin-right: 8px; }
+@media (prefers-reduced-motion: reduce) { .idia-switch::after { transition: none; } }

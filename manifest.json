@@ -1,0 +1,93 @@
+{
+  "manifest_version": 3,
+  "name": "IDIA Privacy Protector",
+  "version": "0.6.0",
+  "description": "Local text and file privacy protection with conversation-scoped tokens and manual decoding across seven AI platforms.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IDIA Privacy Protector"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://copilot.microsoft.com/*",
+        "https://perplexity.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://grok.com/*",
+        "https://www.grok.com/*"
+      ],
+      "js": [
+        "lib/jszip.min.js",
+        "detectors.js",
+        "engine.js",
+        "tokenSyntax.js",
+        "responseTree.js",
+        "siteAdapters/platforms.js",
+        "siteAdapters/chatgpt.js",
+        "siteAdapters/gemini.js",
+        "siteAdapters/claude.js",
+        "siteAdapters/deepseek.js",
+        "siteAdapters/copilot.js",
+        "siteAdapters/perplexity.js",
+        "siteAdapters/grok.js",
+        "siteAdapters/editors.js",
+        "siteAdapters/baseAdapter.js",
+        "siteAdapters/genericAdapter.js",
+        "siteAdapters/registry.js",
+        "vaultClient.js",
+        "fileProcessors/textProcessor.js",
+        "fileProcessors/ooxmlArchive.js",
+        "fileProcessors/docxProcessor.js",
+        "fileProcessors/xlsxProcessor.js",
+        "fileProcessors/pdfLimits.js",
+        "fileProcessors/localRuntimeClient.js",
+        "fileProcessors/pdfProcessor.js",
+        "fileProcessors/imageLimits.js",
+        "fileProcessors/imageProcessor.js",
+        "reviewUI.js",
+        "fileGuard.js",
+        "content.js",
+        "manualDecode.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css",
+        "design-system.css",
+        "fileProcessors/pdfRuntime.html",
+        "fileProcessors/imageRuntime.html",
+        "decode.css",
+        "responseModal.html",
+        "manualDecode.css"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://copilot.microsoft.com/*",
+        "https://perplexity.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://grok.com/*",
+        "https://www.grok.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self'; worker-src 'self'; font-src 'self' blob: data:; img-src 'self' blob: data:"
+  },
+  "minimum_chrome_version": "114",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

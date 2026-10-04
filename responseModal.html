@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; frame-src 'none'; form-action 'none'">
+<title>IDIA Decode</title><link rel="stylesheet" href="responseModal.css">
+<script src="lib/jszip.min.js" defer></script><script src="engine.js" defer></script><script src="tokenSyntax.js" defer></script>
+<script src="fileProcessors/textProcessor.js" defer></script><script src="fileProcessors/ooxmlArchive.js" defer></script>
+<script src="fileProcessors/docxProcessor.js" defer></script><script src="fileProcessors/xlsxProcessor.js" defer></script>
+<script src="fileProcessors/decodeProcessor.js" defer></script><script src="panelFileDecode.js" defer></script><script src="responseModal.js" defer></script>
+</head><body><main class="idia-manual-panel" aria-label="IDIA Decode">
+<header><p class="idia-brand">LOCAL PRIVACY PROTECTION</p><h1 id="heading">IDIA · Decode</h1><button id="close" class="idia-button idia-close" aria-label="Close decode panel">×</button></header>
+<div class="idia-mode-tabs" role="tablist" aria-label="Decode mode"><button id="text-tab" class="idia-button" role="tab" aria-selected="true" aria-controls="text-mode">Text</button><button id="file-tab" class="idia-button" role="tab" aria-selected="false" aria-controls="file-mode" tabindex="-1">File</button></div>
+<section id="text-mode" role="tabpanel" aria-labelledby="text-tab">
+<section id="input-state"><label for="protected-input">Paste protected AI response</label><textarea id="protected-input" maxlength="200000" spellcheck="false" autocomplete="off" placeholder="Paste protected AI response"></textarea><p class="idia-note">Exact tokens only. Your information stays local.</p><footer><button id="clear" class="idia-button">Clear</button><button id="decode" class="idia-button idia-primary" disabled>Decode</button></footer></section>
+<section id="decoded-state" hidden><p id="summary" role="status"></p><pre id="decoded-preview" tabindex="0" aria-label="Decoded text"></pre><footer><button id="back" class="idia-button">Back</button><button id="copy" class="idia-button idia-primary">Copy Decoded</button></footer></section>
+</section>
+<section id="file-mode" role="tabpanel" aria-labelledby="file-tab" hidden>
+<p class="idia-note">Restore protected IDIA tokens locally.<br>TXT · CSV · DOCX · XLSX</p>
+<div id="file-picker" class="idia-drop-zone"><p>Drop a protected file here<br>or</p><button id="choose-file" class="idia-button" disabled>Choose File</button><input id="decode-file" type="file" accept=".txt,.csv,.docx,.xlsx" aria-label="Protected file" hidden disabled></div>
+<p id="file-name" class="idia-file-name"></p><p id="file-summary" role="status"></p><ul id="file-hints" class="idia-note"></ul>
+<footer id="file-review-actions" hidden><button id="cancel-file" class="idia-button">Cancel</button><button id="build-file" class="idia-button idia-primary" disabled>Decode File</button></footer>
+<footer id="file-success-actions" hidden><button id="another-file" class="idia-button">Choose Another</button><a id="download-file" class="idia-button idia-primary" download>Download Decoded</a></footer>
+</section>
+<p id="status" class="idia-note" role="status"></p>
+</main></body></html>

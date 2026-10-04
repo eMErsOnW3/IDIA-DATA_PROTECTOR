@@ -1,0 +1,14 @@
+/dist/
+node_modules/
+.pnpm-store/
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.key

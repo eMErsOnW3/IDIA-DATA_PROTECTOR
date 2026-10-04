@@ -1,0 +1,22 @@
+@import url('design-system.css');
+:host { font: 14px/1.5 system-ui, sans-serif; color: var(--idia-text); }
+.idia-response-card { box-sizing: border-box; margin: 16px 0; padding: 18px; max-width: 680px; background: var(--idia-bg-deep); color: var(--idia-text); border: 1px solid var(--idia-border); border-radius: var(--idia-radius); }
+.idia-response-card strong { color: var(--idia-purple); font-size: 12px; letter-spacing: .08em; }
+.idia-response-card p { margin: 10px 0; font-size: 13px; color: var(--idia-muted); }
+.idia-decode-page { margin: 0; background: var(--idia-bg-deep); color: var(--idia-text); font: 16px/1.6 system-ui,sans-serif; }
+.idia-decode-page main { max-width: 1000px; margin: 40px auto; padding: 0 24px 50px; }
+.idia-decode-page .idia-eyebrow { font-size: 12px; letter-spacing: .12em; color: var(--idia-purple); }
+.idia-muted { color: var(--idia-muted); font-size: 14px; }
+.idia-decode-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+.idia-decode-page button, .idia-response-card button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--idia-border); background: var(--idia-surface); color: var(--idia-text); cursor: pointer; }
+.idia-decode-page button[aria-pressed="true"], .idia-response-card button:last-child { background: var(--idia-primary); }
+.idia-decode-page button:disabled, .idia-response-card button:disabled { opacity: .55; cursor: default; }
+.idia-decode-page :focus-visible, .idia-response-card :focus-visible { outline: 2px solid var(--idia-blue); outline-offset: 3px; }
+.idia-decoded-content, .idia-file-decode { border: 1px solid var(--idia-border); background: var(--idia-glass); padding: 24px; border-radius: var(--idia-radius); margin-top: 24px; overflow-wrap: anywhere; }
+.idia-decoded-content pre { overflow: auto; padding: 14px; background: var(--idia-bg-deep); white-space: pre-wrap; }
+.idia-decoded-content table { border-collapse: collapse; display: block; overflow: auto; max-width: 100%; }
+.idia-decoded-content th, .idia-decoded-content td { border: 1px solid var(--idia-border); padding: 8px 12px; }
+.idia-decoded-content a { color: var(--idia-blue); text-decoration: underline; }
+.idia-file-decode input { display: block; margin: 12px 0; max-width: 100%; }
+.idia-file-decode a { color: var(--idia-blue); }
+[hidden] { display: none !important; }

@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; frame-src 'none'; form-action 'none'">
+<title>IDIA · Local decode</title><link rel="stylesheet" href="decode.css">
+<script src="lib/jszip.min.js" defer></script><script src="detectors.js" defer></script><script src="engine.js" defer></script>
+<script src="tokenSyntax.js" defer></script><script src="responseTree.js" defer></script>
+<script src="fileProcessors/textProcessor.js" defer></script><script src="fileProcessors/ooxmlArchive.js" defer></script>
+<script src="fileProcessors/docxProcessor.js" defer></script><script src="fileProcessors/xlsxProcessor.js" defer></script>
+<script src="fileProcessors/decodeProcessor.js" defer></script><script src="decode.js" defer></script>
+</head><body class="idia-decode-page"><main>
+<p class="idia-eyebrow">IDIA · LOCAL RESPONSE VIEWER</p><h1>Protected response, local choice</h1>
+<p id="scope" class="idia-muted"></p><p id="status" role="status">Opening local session…</p>
+<section id="response" hidden><div class="idia-decode-actions" role="group" aria-label="Response view">
+<button id="protected" type="button" aria-pressed="true">Protected</button><button id="decoded" type="button" aria-pressed="false">Decoded</button><button id="copy" type="button" disabled>Copy Decoded</button>
+</div><article id="response-view" class="idia-decoded-content"></article>
+<p class="idia-muted">This extension tab does not change ChatGPT’s response. Links are inactive here.</p></section>
+<section class="idia-file-decode"><h2>Decode Local File</h2><p>Select a downloaded TXT, CSV, DOCX or XLSX containing this conversation’s IDIA tokens. The protected original stays unchanged.</p>
+<label for="decode-file">Protected file</label><input id="decode-file" type="file" accept=".txt,.csv,.docx,.xlsx">
+<p id="file-summary" role="status"></p><ul id="file-hints"></ul>
+<div class="idia-decode-actions"><button id="cancel-file" type="button">Cancel file operation</button><button id="download" type="button" disabled>Decode &amp; Download</button></div>
+<a id="download-link" hidden>Download decoded copy</a></section>
+<p class="idia-muted">Mappings last only for this browser/extension session. Clearing the vault closes decoded views. Previously copied text and downloaded files remain yours.</p>
+</main></body></html>

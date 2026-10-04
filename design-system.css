@@ -1,0 +1,49 @@
+/* Shared by the popup and IDIA's shadow root. No remote fonts or assets. */
+:root, :host {
+  --idia-bg: #0e1329;
+  --idia-bg-deep: #090d1c;
+  --idia-surface: #171d36;
+  --idia-glass: rgb(23 29 54 / 96%);
+  --idia-border: #39415f;
+  --idia-border-soft: #2b3350;
+  --idia-text: #f6f5ff;
+  --idia-muted: #b3bbd4;
+  --idia-purple: #b6a3ff;
+  --idia-pink: #eda6d9;
+  --idia-blue: #9fc9ff;
+  --idia-danger: #ffb4c2;
+  --idia-success: #a4e3d0;
+  --idia-danger-bg: #372237;
+  --idia-selected: #272640;
+  --idia-hover: #252c47;
+  --idia-primary: #6944b9;
+  --idia-primary-end: #87438b;
+  --idia-overlay: rgb(4 7 19 / 72%);
+  --idia-radius: 16px;
+  --idia-radius-small: 10px;
+  --idia-shadow: 0 24px 80px rgb(0 0 0 / 38%), 0 0 48px rgb(116 83 188 / 8%);
+  --idia-highlight: linear-gradient(110deg, var(--idia-purple), var(--idia-pink));
+  --idia-cta: linear-gradient(110deg, var(--idia-primary), var(--idia-primary-end));
+  --idia-font: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+.idia-button {
+  appearance: none; box-sizing: border-box; display: inline-flex; align-items: center;
+  justify-content: center; gap: 8px; min-height: 42px; padding: 10px 16px;
+  border: 1px solid var(--idia-border); border-radius: var(--idia-radius-small);
+  background: var(--idia-surface); color: var(--idia-text); font: 600 14px/1.35 var(--idia-font);
+  text-decoration: none; cursor: pointer; transition: background-color 140ms, border-color 140ms;
+}
+.idia-button:hover { background: var(--idia-hover); border-color: var(--idia-muted); }
+.idia-button:disabled { cursor: default; opacity: .65; }
+.idia-primary { background: var(--idia-cta); border-color: var(--idia-primary-end); }
+.idia-primary:hover { background: var(--idia-cta); border-color: var(--idia-purple); }
+.idia-button:focus-visible, .idia-checkbox:focus-visible, .idia-switch:focus-visible,
+.idia-settings-summary:focus-visible, .idia-list:focus-visible {
+  outline: 2px solid var(--idia-blue); outline-offset: 4px;
+}
+.idia-icon { width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.idia-eyebrow, .idia-brand { color: var(--idia-muted); font: 600 12px/1.4 var(--idia-font); letter-spacing: 1.4px; }
+.idia-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { .idia-button { transition: none; } }
